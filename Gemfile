@@ -11,7 +11,7 @@ gem 'bson_ext', '1.3.0'
 
 
 # Bundle the extra gems:
-gem 'sorcery', '0.6.1'
+gem 'sorcery', '0.8.1'
 
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators
@@ -20,4 +20,5 @@ group :development, :test do
   gem "test-unit", "~> 2.3.0"
   gem "rspec", "~> 2.5.0"
   gem 'rspec-rails', "~> 2.5.0"
+  gem "debugger"
 end

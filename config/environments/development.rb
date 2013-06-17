@@ -15,15 +15,15 @@ Collaboration::Application.configure do
   config.action_controller.perform_caching = false
 
   # Mailer options
-  config.action_mailer.perform_deliveries = false
+  config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     :address              => "smtp.gmail.com",
     :port                 => 587,
-    :domain               => 'example.com',
-    :user_name            => 'nbenari',# put your real username here to send emails.
-    :password             => 'secret', # put your real password here to send emails.
+    :domain               => ENV['GMAIL_DOMAIN'], # or hardcode your domain here
+    :user_name            => ENV['GMAIL_USERNAME'], # or hardcode your username here
+    :password             => ENV['GMAIL_PASSWORD'], # or hardcode your password here
     :authentication       => 'plain',
     :enable_starttls_auto => true  }
 
